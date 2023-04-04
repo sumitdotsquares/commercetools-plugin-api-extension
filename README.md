@@ -49,15 +49,17 @@ cp .env-sample .env
 
 ### Installing PM2
 
-With NPM:
+With NPM
 
-````bash
-npm install pm2 -g
+```bash
+pm2 start app.js
 ```
+
 You can install Node.js easily with NVM or ASDF.
 
 ###Start an application
 You can start any application (Node.js, Python, Ruby, binaries in $PATH...) like that:
+
 ```bash
 pm2 start app.js
 ```
