@@ -104,16 +104,13 @@ This example used webhooks to handel payment's asynchronously, an Super Payment 
 
 Super Payment register your webhook endpoint, provide the publicly accessible HTTPS URL to your webhook endpoint, and select the type of events you’re receiving in your endpoint. The URL format to register a webhook endpoint is:
 
-````
-
 https://<your-website>/super-payment/success
 https://<your-website>/super-payment/refund
 
-```
 
 For example, if your domain is `https://mycompanysite.com` specify `https://mycompanysite.com/super-payment/success` as the endpoint URL.
 
-# Extension Endpoints
+## Extension Endpoints
 
 | URL                           | Method | Description                                                         |
 | ----------------------------- | ------ | ------------------------------------------------------------------- |
@@ -146,4 +143,3 @@ For example, if your domain is `https://mycompanysite.com` specify `https://myco
   - Select the Raw Text option and paste above cURL command.
   - Hit import and you will have the command in your Postman builder!
   - Click Send to post the command
-```
