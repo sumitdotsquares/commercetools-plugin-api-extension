@@ -205,5 +205,5 @@ app.post("/super-payment/refunds", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server Started on on port: ${PORT}`);
+  console.log(`Server Started on on port: http://localhost:${PORT}`);
 });
