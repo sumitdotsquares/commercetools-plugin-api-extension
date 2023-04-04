@@ -21,8 +21,7 @@ app.use(cors());
 
 dotenv.config();
 
-const PORT = process.env.CT_PORT;
-const BASE_URL = process.env.CT_BASE_URL;
+const PORT = process.env.CT_PORT || 8081;
 
 /* ------ GET PRODUCTS ------ */
 app.get("/products", async (req, res) => {

@@ -32,18 +32,35 @@ cp .env-sample .env
 | Variable               | Description                    | Example                                         |
 | ---------------------- | ------------------------------ | ----------------------------------------------- |
 | SUPAR_API_URL          | Super Payment API URL          | https://api.staging.superpayments.com/v2        |
-| SUPAR_API_KEY          | Super Payment API Key          | **\***                                          |
-| SUPAR_API_CONFIRMATION | Super Payment confirmation Key | **\***                                          |
+| SUPAR_API_KEY          | Super Payment API Key          | <your api key>                                  |
+| SUPAR_API_CONFIRMATION | Super Payment confirmation Key | <your conformation key>                         |
 | CT_PORT                | Port to run the server         | 8081                                            |
 | CT_BASE_URL            | Base URL of the server         | http://localhost:8081                           |
-| CT_PROJECT_KEY         | CommerceTools Project Key      | **\***                                          |
-| CT_CLIENT_ID           | CommerceTools Client ID        | **\***                                          |
-| CT_SECRET              | CommerceTools Secret Key       | **\***                                          |
+| CT_PROJECT_KEY         | CommerceTools Project Key      | <your project key>                              |
+| CT_CLIENT_ID           | CommerceTools Client ID        | <your client id>                                |
+| CT_SECRET              | CommerceTools Secret Key       | <your secret id>                                |
 | CT_API_URL             | CommerceTools API URL          | https://api.europe-west1.gcp.commercetools.com  |
 | CT_AUTH_URL            | CommerceTools Auth URL         | https://auth.europe-west1.gcp.commercetools.com |
 | SUPER_successUrl       | Success return url             | https://www.merchant.com/success.html           |
 | SUPER_cancelUrl        | Cancel return url              | https://www.merchant.com/cancel.html            |
 | SUPER_failureUrl       | Fail return url                | https://www.merchant.com/fail.html              |
+
+## Deploy on production with [PM2](https://www.npmjs.com/package/pm2)
+
+### Installing PM2
+
+With NPM:
+
+````bash
+npm install pm2 -g
+```
+You can install Node.js easily with NVM or ASDF.
+
+###Start an application
+You can start any application (Node.js, Python, Ruby, binaries in $PATH...) like that:
+```bash
+pm2 start app.js
+```
 
 # Commerce Tools
 
@@ -85,9 +102,11 @@ This example used webhooks to handel payment's asynchronously, an Super Payment 
 
 Super Payment register your webhook endpoint, provide the publicly accessible HTTPS URL to your webhook endpoint, and select the type of events you’re receiving in your endpoint. The URL format to register a webhook endpoint is:
 
-```
+````
+
 https://<your-website>/super-payment/success
 https://<your-website>/super-payment/refund
+
 ```
 
 For example, if your domain is `https://mycompanysite.com` specify `https://mycompanysite.com/super-payment/success` as the endpoint URL.
@@ -125,3 +144,4 @@ For example, if your domain is `https://mycompanysite.com` specify `https://myco
   - Select the Raw Text option and paste above cURL command.
   - Hit import and you will have the command in your Postman builder!
   - Click Send to post the command
+```
