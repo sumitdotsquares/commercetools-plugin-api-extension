@@ -16,7 +16,7 @@ When a user chooses to checkout the e-commerce site will create both a Super Pay
 
 ## Installation
 
-- `git clone git@github.com:superpayments/commercetools-plugin-api-extension.git`
+- `git clone https://github.com/sumitdotsquares/commercetools-plugin-api-extension.git`
 - `cd commercetools-plugin-api-extension`
 - `git checkout release`
 - `npm install`
